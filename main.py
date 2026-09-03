@@ -1,15 +1,18 @@
+import requests
 from fastapi import FastAPI
 app = FastAPI()
 
-taxas = {
-    "USD-BRL": 5.40,
-    "BRL-USD": 0.185,
-    "EUR-BRL": 5.85
-}
 
 @app.get("/converter")
 def converter(valor: float, de: str, para: str):
-    chave = f"{de}-{para}"
-    resultado = taxas[chave] * valor
-    return {"resultado": resultado}
+    url = f"https://economia.awesomeapi.com.br/last/{de}-{para}"
+    resp = requests.get(url)
+    respostalimpra = resp.json()
+    chave = f"{de}{para}"
+    x = float(respostalimpra[chave]["bid"])
+    resultado = x * valor
+
+    return {"Resultadooo": resultado}
+
+
 
