@@ -76,4 +76,4 @@ Luis Gabriel
 
 GitHub: https://github.com/Luisgnvst
 
-LinkedIn: https://linkedin.com/in/luis-gabriel-068a772b7
+LinkedIn: https://www.linkedin.com/in/luis-gabriel-neves-trist%C3%A3o-068a772b7/
